@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <title>FRETmeister - Flask page hosted locally</title>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+   <body>
+      <form action = "" method = "POST" 
+         enctype = "multipart/form-data">  
+	 <label for="number1">Density:</label>
+         <input type = "number" name = "number1" id="num1" /><br>
+	 <label for="number2">Green to Red Ratio:</label>
+         <input type = "number" name = "number2" id="num2" /><br>
+	 <label for="number3">Blue to Red Ratio:</label>
+         <input type = "number" name = "number3" id="num3" /><br>
+         <input type = "submit"/><br>
+      </form>   
+   <img src = '{{spectrum}}'>
+
+   <p style='font-size:10vw'> {{percent}} % </p>
+   </body>
+</html>
